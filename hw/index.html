@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    // - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
+    // створити пустий масив, наповнити його 10 об'єктами new User(....)
+    // function User(id, name, surname, email, phone) {
+    //     this.id =id;
+    //     this.name = name;
+    //     this.surname = surname;
+    //     this.email = email;
+    //     this.phone = phone;
+    // }
+    //
+    // const userBox =  [
+    //     new User (1, 'Ivan', 'Ivanovich', 'iva@gmail.com', 380687712004),
+    //     new User (3, 'Alex', 'Brovich', 'br@gmail.com', 380979021057),
+    //     new User (2, 'Oleg', 'orlov ', 'oleg@gmail.com', 380687712004),
+    //     new User (4, 'Max', 'okopov ', 'pov@gmail.com', 380687712004),
+    //     new User (55, 'Vitalik', 'orlov ', 'oleg@gmail.com', 380687712004),
+    //     new User (62, 'ilya', 'orlov ', 'oleg@gmail.com', 380687712004),
+    //     new User (7, 'Andriy', 'orlov ', 'oleg@gmail.com', 380687712004),
+    //     new User (84, 'Roman', 'orlov ', 'oleg@gmail.com', 380687712004),
+    //     new User (9, 'Misha', 'orlov ', 'oleg@gmail.com', 380687712004),
+    //     new User (10, 'Ostsap', 'orlov ', 'oleg@gmail.com', 380687712004),
+    // ]
+    // console.log(userBox)
+    // - Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об'єкти з парними id (filter)
+    // let filter = userBox.filter((item) =>{
+    //     if (item.id % 2 ===0){
+    //         return item
+    //     }
+    // })
+    // console.log(filter)
+
+    // - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
+    // userBox.sort((a,b) => a.id- b.id);
+    // console.log(userBox)
+
+    // - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+    class Client {
+        constructor(id, name, surname, email, phone, order) {
+            this.id = id
+            this.name = name
+            this.surname = surname
+            this.email = email
+            this.phone = phone
+            this.order = order
+        }
+    }
+
+    // створити пустий масив, наповнити його 10 об'єктами Client
+    const newArray = [
+        new Client (1, 'Ivan', 'Ivanovich', 'iva@gmail.com', 380687712004, ['cd-player']),
+        new Client(3, 'Alex', 'Brovich', 'br@gmail.com', 380979021057, ['coffee-table']),
+        new Client(2, 'Oleg', 'orlov ', 'oleg@gmail.com', 380687712004, ['sofa']),
+        new Client(4, 'Max', 'okopov ', 'pov@gmail.com', 380687712004, ['games console']),
+        new Client(55, 'Vitalik', 'orlov ', 'oleg@gmail.com', 380687712004, ['iron']),
+        new Client(62, 'ilya', 'orlov ', 'oleg@gmail.com', 380687712004, ['hoover']),
+        new Client(7, 'Andriy', 'orlov ', 'oleg@gmail.com', 380687712004, ['lamp', 'pillow']),
+        new Client(84, 'Roman', 'orlov ', 'oleg@gmail.com', 380687712004, ['radiator']),
+        new Client(9, 'Misha', 'orlov ', 'oleg@gmail.com', 380687712004, ['record player', 'TV', 'stereo']),
+        new Client(10, 'Ostsap', 'orlov ', 'oleg@gmail.com', 380687712004, ['washing machine']),
+
+    ]
+     // console.log(newArray)
+    // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+    newArray.sort((a,b) => a.order.length - b.order.length);
+    console.log(newArray)
+</script>
+
+</body>
+</html>
